@@ -1,0 +1,244 @@
+/* M.I.K.U. Dashboard Styles */
+
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --border: #2a2f3d;
+  --accent: #6c8cff;
+  --accent-dim: #4a62b3;
+  --text: #e8eaf0;
+  --muted: #8b90a0;
+  --success: #4ade80;
+  --warning: #fbbf24;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.status-panel {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.status-badge.asleep { border-color: #6b7280; color: #9ca3af; }
+.status-badge.awake { border-color: var(--success); color: var(--success); }
+.status-badge.listening { border-color: var(--warning); color: var(--warning); }
+.status-badge.thinking { border-color: var(--accent); color: var(--accent); }
+.status-badge.acting { border-color: #f472b6; color: #f472b6; }
+.status-badge.speaking { border-color: #c084fc; color: #c084fc; }
+
+.gesture-hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.voice-hint {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+}
+
+.webcam-panel {
+  margin-bottom: 1.5rem;
+}
+
+.webcam-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  background: #000;
+  aspect-ratio: 4 / 3;
+}
+
+#webcam-video {
+  display: none;
+}
+
+#webcam-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scaleX(-1);
+}
+
+.gesture-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 1rem;
+  background: rgba(15, 17, 23, 0.75);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.webcam-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+
+button {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+button:hover {
+  background: var(--border);
+  border-color: var(--accent-dim);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.display-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.display-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.display-box h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.display-box p {
+  font-size: 0.95rem;
+  min-height: 2.5rem;
+}
+
+.trace-panel pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 0.78rem;
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  color: #a8b4d0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+footer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .display-panel {
+    grid-template-columns: 1fr;
+  }
+}

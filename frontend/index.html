@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.I.K.U. Desktop Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>◉ M.I.K.U.</h1>
+      <p class="subtitle">Machine Intelligence for Knowledge &amp; User-assistance</p>
+    </header>
+
+    <section class="status-panel">
+      <div class="status-badge" id="status-badge">asleep</div>
+      <p class="gesture-hint" id="gesture-hint">Gesture: —</p>
+      <p class="voice-hint" id="voice-hint">TTS: loading…</p>
+    </section>
+
+    <section class="webcam-panel">
+      <h2>Webcam + MediaPipe Hands</h2>
+      <div class="webcam-wrap">
+        <video id="webcam-video" autoplay playsinline muted></video>
+        <canvas id="webcam-canvas"></canvas>
+        <div class="gesture-overlay" id="gesture-overlay">Camera starting…</div>
+      </div>
+      <div class="webcam-controls">
+        <button id="start-gestures-btn">Start Webcam</button>
+        <button id="stop-gestures-btn">Stop Webcam</button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <h2>Gesture Fallback Controls</h2>
+      <div class="button-grid">
+        <button data-action="wake">✋ Wake</button>
+        <button data-action="sleep">✊ Sleep</button>
+        <button data-action="listen">🤏 Listen</button>
+        <button data-action="study_mode">☝️ Study Mode</button>
+        <button data-action="search_mode">✌️ Search Mode</button>
+        <button data-action="chat_mode">🤟 Chat Mode</button>
+        <button data-action="thumbs_up">👍 Thumbs Up</button>
+        <button data-action="thumbs_down">👎 Thumbs Down</button>
+      </div>
+    </section>
+
+    <section class="input-panel">
+      <h2>Text Command</h2>
+      <div class="input-row">
+        <input type="text" id="command-input" placeholder="Type a command, e.g. start study mode" />
+        <button id="send-btn">Send</button>
+      </div>
+    </section>
+
+    <section class="display-panel">
+      <div class="display-box">
+        <h3>Transcript</h3>
+        <p id="transcript-display">—</p>
+      </div>
+      <div class="display-box">
+        <h3>MIKU Response</h3>
+        <p id="response-display">—</p>
+      </div>
+    </section>
+
+    <section class="trace-panel">
+      <h2>Agent Trace Log</h2>
+      <pre id="trace-display">Waiting for first command...</pre>
+    </section>
+  </div>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

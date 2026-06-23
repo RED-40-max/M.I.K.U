@@ -1,0 +1,25 @@
+{
+  "allowed_url_patterns": [
+    "https://www.google.com/search?q=",
+    "https://www.youtube.com/results?search_query=",
+    "https://www.youtube.com/watch",
+    "https://pomofocus.io",
+    "https://www.online-stopwatch.com",
+    "https://docs.google.com/document",
+    "https://keep.google.com"
+  ],
+  "whitelisted_urls": [
+    "https://pomofocus.io",
+    "https://www.online-stopwatch.com",
+    "https://docs.google.com/document/create",
+    "https://keep.google.com"
+  ],
+  "default_notes_url": "https://docs.google.com/document/create",
+  "default_checklist_url": "https://keep.google.com",
+  "server_host": "127.0.0.1",
+  "server_port": 8000,
+  "voice": {
+    "edge_voice": "en-GB-RyanNeural",
+    "edge_rate": "-5%"
+  }
+}

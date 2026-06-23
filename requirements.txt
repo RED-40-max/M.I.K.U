@@ -1,0 +1,30 @@
+# M.I.K.U. dependencies — core (no paid APIs required)
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+pydantic>=2.0.0
+
+# Voice
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.14
+# TTS: edge-tts fallback + pyttsx3 last resort
+edge-tts>=6.1.0
+pyttsx3>=2.90
+
+# Gestures (optional — browser MediaPipe is primary)
+mediapipe>=0.10.0
+opencv-python-headless>=4.9.0
+
+# Web scraping for YouTube top-3 (optional fallback)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# VOICEVOX: install desktop app for Miku-style voice → https://voicevox.hiroshiba.jp/
+# Optional: offline speech recognition
+# faster-whisper>=1.0.0
+
+# Optional: OpenAI for nicer chat (only if OPENAI_API_KEY is set)
+# langchain-openai>=0.2.0

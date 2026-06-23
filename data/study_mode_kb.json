@@ -1,0 +1,9 @@
+{
+  "music_query": "lofi study music",
+  "backup_music_query": "bossa nova study music",
+  "timer": "https://pomofocus.io",
+  "backup_timer": "https://www.online-stopwatch.com",
+  "notes": "https://docs.google.com/document/create",
+  "checklist": "https://keep.google.com",
+  "description": "Study Mode opens music, timer, notes, and checklist for focused work."
+}
