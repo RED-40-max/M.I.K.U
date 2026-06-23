@@ -4,7 +4,6 @@
 
 A simple "Siri for my computer" MVP built for the CMU Agentic AI capstone. MIKU is controlled by **hand gestures** and **voice**, powered by a **LangGraph** agent workflow with **LangChain tools**, full **trace logging**, and **safety guardrails**.
 
-No paid API keys required — MIKU runs deterministically with rule-based intent detection. If `OPENAI_API_KEY` is set, optional ChatOpenAI improves chat responses.
 
 ---
 
