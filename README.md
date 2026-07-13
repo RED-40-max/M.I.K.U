@@ -4,6 +4,7 @@
 
 A simple "Siri for my computer" MVP built for the CMU Agentic AI capstone. MIKU is controlled by **hand gestures** and **voice**, powered by a **LangGraph** agent workflow with **LangChain tools**, full **trace logging**, and **safety guardrails**.
 
+ [Video Demonstration](https://youtu.be/fmAJf1Jk4sY) 
 
 ---
 
@@ -306,5 +307,6 @@ CMU Agentic AI Capstone — educational MVP.
 - [Evaluation Results](docs/EVALUATION_RESULTS.md)
 - [Gap Analysis](docs/GAP_ANALYSIS.md)
 - [Presentation Outline](docs/PRESENTATION_OUTLINE.md)
+- [Video Demonstration](https://youtu.be/fmAJf1Jk4sY) 
 
 Run evaluation: `python scripts/run_eval.py`
